@@ -1,2 +1,2 @@
 # photography-event
-A layout of event register page built with pure HTML5, CSS and little javascript
+A A responsive layout of event register page built with pure HTML5, CSS and little javascript
