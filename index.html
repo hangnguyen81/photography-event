@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Photography Event</title>
+        <link href="css/photography-event.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale = 1">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class = "container">
+            <div class="event-ads">
+                <h1>Learn how to capture <span>stunning scenery</span> of Finnish nature</h1>
+                <p> Join us for this live webbinar</p>
+                <p class="toptext"> Finland through my lens</p>
+            </div>
+            <div id="register-content" class="event-register">
+                <h2>Become pro-photographer!</h2>
+                <p>Register today</p>
+                <p class="text-body">
+                    Taking pictures of landscapes may seem simple when you’re surrounded by so much 
+                    natural beauty in the outdoors. But to really take a great photo, one that you want
+                     to share with friends or hang on your wall, there’s more to it than just pulling out
+                      your camera and snapping a few pics.</p>
+                <div  class="form-register">
+                    <form id="form-register" action="#" method="POST">
+                        <input type="text" name="fullname" placeholder="Your full name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <button class="btn" type="submit" name=submit> Register</button>
+                    </form>
+                </div>
+                <p class="text-note">Your information are safe and sound</p>  
+
+                <script>
+                    let formRegister = document.getElementById("form-register")
+                    formRegister.addEventListener("submit", event => {
+                        event.preventDefault()
+                        let ourFormData = new FormData(event.target)
+                        let userFullName = ourFormData.get("fullname")
+                        let userEmail = ourFormData.get("email")
+                        let updateHtmlContent = '<h2>Congratulation, ' 
+                            + userFullName 
+                            +'! </h2><p>You open your path to become a professional photographer</p><p class="text-note">You will get weekly photograpy tips sent to '
+                            + userEmail 
+                            + '</p>' 
+                        let ourRegisterContent = document.getElementById("register-content")
+                        ourRegisterContent.innerHTML = updateHtmlContent
+                    })
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

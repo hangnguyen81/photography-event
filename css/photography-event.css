@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+}
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Oswald', sans-serif; */
+
+body{
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+/* Page layout */
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.event-ads{
+    background-color: #28502f;
+    background-image: url("../images/IMG_5648.JPG");
+    background-position: center;
+    background-blend-mode:multiply;
+    color: #c4ffcf;
+    text-align: center;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:0;
+}
+
+.event-register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+}
+
+
+/* Typography */
+h1{
+    /* font-family: 'Oswald', sans-serif; */
+    font-size: 2.125rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-weight: 300;
+}
+
+h1 + p{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+span{
+    font-weight: 700;
+    color: whitesmoke;
+
+}
+
+.toptext {
+    font-size: .625rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    order: -1;
+    border-top: 4px solid #c4ffcf;
+    margin-top: 0rem;
+}
+
+h2{
+    margin-bottom: 0;
+}
+h2 + p{
+    text-transform: uppercase;
+    color: #3d7c47;
+    font-weight: 700;
+    margin-top: 0;
+}
+.text-body{
+    font-family:  sans-serif;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+
+.text-note{
+    font-size: .625rem;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+/* Form layout */
+.form-register{
+    width: 70%;
+}
+
+input{
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.3em;
+    margin-bottom: .5em;
+    border-radius: 5px;
+    border: 1px solid #28502f
+}
+
+.btn{
+    width: 100%;
+    text-align: center;
+    font-size: .9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.5em;
+    cursor: pointer;
+    background-image:linear-gradient(to left,#28502f, #3d7c47);
+    color: whitesmoke;
+    border: 0;
+    border-radius: 5px ;
+}
+
+.btn:hover,
+.btn:focus{
+    color: #c4ffcf;
+}
+
+@media (min-width:600px){
+    body{
+        font-size: 1.25rem;
+    }
+    
+    h1{
+        font-size: 3rem;
+    }
+    .container{
+        flex-direction: row;
+        max-width: 1000px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .event-ads{
+        width: 60%;
+        height: 100vh;
+    }
+    .event-register{
+        width: 40%;
+        height: 100vh;
+    }
+    .text-note,
+    .toptext{
+        font-size:.75rem;
+    }
+
+}
